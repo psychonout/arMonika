@@ -53,6 +53,7 @@ def upload_files():
     sftp.close()
     ssh.close()
 
+
 def push_to_git():
     subprocess.call(["git", "add", "."])
     subprocess.call(["git", "commit", "--amend", "--no-edit"])
