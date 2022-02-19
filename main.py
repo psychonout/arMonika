@@ -7,6 +7,8 @@ from datetime import datetime
 import paramiko
 import requests
 
+from relay import alert_slack
+
 def proxify(url=None):
     if not url:
         url = "https://ipinfo.io"
@@ -53,6 +55,7 @@ def upload_files():
     sftp.close()
     ssh.close()
 
+
 def push_to_git():
     subprocess.call(["git", "add", "."])
     subprocess.call(["git", "commit", "--amend", "--no-edit"])
@@ -63,3 +66,4 @@ if __name__ == "__main__":
     find_pages()
     push_to_git()
     print(f"Success at {datetime.now()}")
+    alert_slack("rpi_announce", "Updated the links for armonika")

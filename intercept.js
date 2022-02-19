@@ -23,4 +23,3 @@ function replaceLinks() {
 }
 
 $(window).on("load", replaceLinks());
-setTimeout(replaceLinks(), 1000);
