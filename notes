@@ -1,0 +1,13 @@
+2022-02-18T00:02
+https://www.interjeras.lt/balsuok?p=3#i3477
+https://www.interjeras.lt/balsuok?p=5#i3479
+https://www.interjeras.lt/balsuok?p=6#i3478
+2022-02-18T07:58
+https://www.interjeras.lt/balsuok?p=6#i3477
+https://www.interjeras.lt/balsuok?p=6#i3479
+https://www.interjeras.lt/balsuok?p=8#i3478
+2022-02-18T12:17
+https://www.interjeras.lt/balsuok?p=7#i3477
+https://www.interjeras.lt/balsuok?p=5#i3478
+https://www.interjeras.lt/balsuok?p=6#i3479
+$.each($('.vote'), function(index, value) {console.log(value.innerText)});
