@@ -47,11 +47,9 @@ def upload_files():
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     ssh.connect("185.224.138.91", username="u829386246", port="65002")
     sftp = ssh.open_sftp()
-    localpath = os.getcwd()
     remotepath = "/home/u829386246/domains/vystymaskitaip.lt/public_html/"
     for i in range(3):
-        sftp.put(f"{localpath}{i}", f"{remotepath}{i}")
-    sftp.put(f"{localpath}intercept.js", f"{remotepath}intercept.js")
+        sftp.put(os.path.join(os.getcwd(), '0'), f"{remotepath}{i}")
     sftp.close()
     ssh.close()
 
