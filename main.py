@@ -62,5 +62,5 @@ def push_to_git():
 
 if __name__ == "__main__":
     find_pages()
-    push_to_git()
+    upload_files()
     print(f"Success at {datetime.now()}")
