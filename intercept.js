@@ -4,15 +4,16 @@ function replaceLinks() {
   );
   for (let i = 0; i < urls.length; i++) {
     let element = urls[i];
-    var request = new XMLHttpRequest();
-    request.open("GET", "https://zwww.vystymaskitaip.lt/" + i);
+    let request = new XMLHttpRequest();
+    let url = "https://www.vystymaskitaip.lt/" + i;
+    request.open("GET", url);
     request.onload = function () {
       if (request.readyState === 4 && request.status === 200) {
         element.href = request.responseText;
       }
     };
+    request.send();
   }
 }
-document.addEventListener("DOMContentLoaded", function (event) {
-  replaceLinks();
-});
+console.log("Replacing links");
+setTimeout(replaceLinks(), 1000);

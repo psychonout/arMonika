@@ -49,7 +49,7 @@ def upload_files():
     sftp = ssh.open_sftp()
     remotepath = "/home/u829386246/domains/vystymaskitaip.lt/public_html/"
     for i in range(3):
-        sftp.put(os.path.join(os.getcwd(), '0'), f"{remotepath}{i}")
+        sftp.put(os.path.join(os.getcwd(), str(i)), f"{remotepath}{i}")
     sftp.close()
     ssh.close()
 
