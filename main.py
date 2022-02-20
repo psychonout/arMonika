@@ -6,8 +6,8 @@ from datetime import datetime
 
 import paramiko
 import requests
-
 from relay import alert_slack
+
 
 def proxify(url=None):
     if not url:
@@ -47,7 +47,7 @@ def upload_files():
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     ssh.connect("185.224.138.91", username="u829386246", port="65002")
     sftp = ssh.open_sftp()
-    localpath = "/Users/donatasgostautas/side/arMonika/"
+    localpath = os.getcwd()
     remotepath = "/home/u829386246/domains/vystymaskitaip.lt/public_html/"
     for i in range(3):
         sftp.put(f"{localpath}{i}", f"{remotepath}{i}")
