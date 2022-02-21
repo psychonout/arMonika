@@ -16,4 +16,4 @@ function replaceLinks() {
   }
 }
 console.log("Replacing links");
-setTimeout(replaceLinks(), 1000);
+setTimeout(replaceLinks(), 100);
